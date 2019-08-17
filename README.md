@@ -1,2 +1,2 @@
 # Codesanook.SessionAssistant
-Tool for conference, meetup, session
+Tool for conference, meet up, session

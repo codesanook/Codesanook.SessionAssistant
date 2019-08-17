@@ -1,0 +1,8 @@
+﻿Name: Codesanook.SessionAssistant
+AntiForgery: enabled
+Author: Codesanook Team
+Website: https://www.codesanook.com
+Version: 1.0
+OrchardVersion: 1.10.3
+Description: Tool for conference, meet up, session
+Dependencies: Codesanook.ReactJS
