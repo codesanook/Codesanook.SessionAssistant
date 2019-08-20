@@ -15,45 +15,46 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.(ts|js)x?$/,
-            loader: 'babel-loader',
-            exclude: /node_modules/
-        }, {
-            test: /\.scss$/,
-            use: [{
-                loader: MiniCssExtractPlugin.loader,
+                test: /\.(ts|js)x?$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/
             }, {
-                loader: 'css-loader', // translates CSS into CommonJS modules
-            }, {
-                loader: 'postcss-loader', // Run post css actions
-                options: {
-                    plugins: function () { // post css plugins, can be exported to postcss.config.js
-                        return [
-                            require('precss'),
-                            require('autoprefixer'),
-                        ];
+                test: /\.scss$/,
+                use: [{
+                    loader: MiniCssExtractPlugin.loader,
+                }, {
+                    loader: 'css-loader', // translates CSS into CommonJS modules
+                }, {
+                    loader: 'postcss-loader', // Run post css actions
+                    options: {
+                        plugins: function () { // post css plugins, can be exported to postcss.config.js
+                            return [
+                                require('precss'),
+                                require('autoprefixer'),
+                            ];
+                        }
                     }
-                }
-            }, {
-                loader: 'resolve-url-loader',
-            }, {
-                loader: 'sass-loader', // compiles Sass to CSS, using Node Sass by default
-                options: {
-                    sourceMap: true
-                }
-            }],
-            exclude: /node_modules/
-        },
-        {
-            test: /\.(png|jpe?g|gif|svg|eot|ttf|woff2?)$/,
-            use: [{
-                loader: 'file-loader',
-                options: {
-                    name: '[name].[ext]',
-                    outputPath: './../styles',
-                }
-            }]
-        }]
+                }, {
+                    loader: 'resolve-url-loader',
+                }, {
+                    loader: 'sass-loader', // compiles Sass to CSS, using Node Sass by default
+                    options: {
+                        sourceMap: true
+                    }
+                }],
+                exclude: /node_modules/
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg|eot|ttf|woff2?)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: './../styles',
+                    }
+                }]
+            }
+        ]
     },
     plugins: [
         new MiniCssExtractPlugin({
@@ -61,7 +62,9 @@ module.exports = {
         })
     ],
     externals: {
-        react: 'React'
+        react: 'React',
+        jquery: 'jQuery',
+        jquery: '$',
     },
     //https://webpack.js.org/configuration/devtool/
     devtool: 'inline-source-map',

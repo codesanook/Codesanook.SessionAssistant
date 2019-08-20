@@ -4,7 +4,7 @@ using Orchard.Themes;
 namespace Codesanook.SessionAssistant.Controllers {
 
     [Themed]
-    public class ClipboardController : Controller {
+    public class PushMessageController : Controller {
         public ActionResult Index() {
             return View();
         }

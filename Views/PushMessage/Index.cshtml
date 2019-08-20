@@ -1,0 +1,13 @@
+﻿@{
+    Script.Require("React").AtHead();
+    Script.Require("ReactDOM").AtHead();
+    Script.Require("jQuery").AtHead();
+
+    <!--Reference the SignalR library. -->
+    Script.Include("jquery.signalR-2.4.1.js").AtHead();
+    <!--Reference the auto generated SignalR hub script. -->
+    Script.Require("SignalR").AtHead();
+    Script.Include("codesanook-session-assistant.js").AtHead();
+}
+
+@Html.React("SessionAssistant.PushMessageFrontend", new { }, clientOnly:true)

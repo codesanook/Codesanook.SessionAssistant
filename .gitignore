@@ -331,3 +331,4 @@ ASALocalRun/
 
 Scripts/**/*.js
 Styles/**/*.css
+src/**/*.js
