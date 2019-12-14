@@ -168,7 +168,6 @@
     <Content Include="tslint.json" />
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
-    <Content Include="src\sass\style.scss" />
     <Content Include="Views\PushMessage\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
@@ -196,16 +195,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="src\components\index.ts" />
-    <None Include="src\main.ts" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="src\components\ConnectionContext.tsx" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="src\index.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
