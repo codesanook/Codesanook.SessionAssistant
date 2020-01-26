@@ -332,3 +332,5 @@ ASALocalRun/
 Scripts/**/*.js
 Styles/**/*.css
 src/**/*.js
+!Scripts/jquery.signalR-2.4.1
+

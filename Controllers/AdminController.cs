@@ -8,6 +8,8 @@ using Orchard.Localization;
 using Orchard.UI.Admin;
 
 namespace Codesanook.SessionAssistant.Controllers {
+
+    // URL /Admin/Codesanook.SessionAssistant/
     [Admin]
     public class AdminController : Controller {
         private readonly IOrchardServices orchardServices;
